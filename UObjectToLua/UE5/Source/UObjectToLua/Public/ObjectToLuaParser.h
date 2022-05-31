@@ -59,7 +59,6 @@ public:
 	static FString GetPropertyValueLuaStr(FProperty* Property, void* Object, bool DefaultAsEmpty = false);
     static void GetArrayFromLuaStr(const FString& LuaStr, TArray<FString>& Arr);
 
-	//检查Object的FProperty的类型并把value字符串转换成对应值并赋值
 	static void CheckSetType(FProperty* Property, void* Object, FString Value);
     static void CheckSetStruct(const UStruct* Struct, void* Object, FString LuaStr);
 };
