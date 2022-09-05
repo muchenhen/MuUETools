@@ -3,13 +3,13 @@
 #pragma once
 #include "MuStruct.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "MuBlueprintLibraryBPLibrary.generated.h"
+#include "MuBlueprintFunctionLibrary.generated.h"
 
 /* 
 一些工具函数
 */
 UCLASS()
-class UMuBlueprintLibraryBPLibrary : public UBlueprintFunctionLibrary
+class UMuBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
 

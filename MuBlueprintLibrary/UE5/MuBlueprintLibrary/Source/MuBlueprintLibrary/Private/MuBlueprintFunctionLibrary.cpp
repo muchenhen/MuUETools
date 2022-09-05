@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-#include "MuBlueprintLibraryBPLibrary.h"
+#include "MuBlueprintFunctionLibrary.h"
 #include "MuBlueprintLibrary.h"
 #include "NiagaraEditorModule.h"
 #include "NiagaraEmitter.h"
@@ -18,12 +18,12 @@
 #include "Particles/ParticleModuleRequired.h"
 #include "Particles/Parameter/ParticleModuleParameterDynamic.h"
 
-UMuBlueprintLibraryBPLibrary::UMuBlueprintLibraryBPLibrary(const FObjectInitializer& ObjectInitializer)
+UMuBlueprintFunctionLibrary::UMuBlueprintFunctionLibrary(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
 }
 
-void UMuBlueprintLibraryBPLibrary::GetFxInvolvedDynamicParameter(const UMaterialInstance* MaterialInstance, TMap<FName, FMTIDynamicParamFloatValueSet>& UseDynamicParameters)
+void UMuBlueprintFunctionLibrary::GetFxInvolvedDynamicParameter(const UMaterialInstance* MaterialInstance, TMap<FName, FMTIDynamicParamFloatValueSet>& UseDynamicParameters)
 {
 	UseDynamicParameters.Empty();
 	if (!MaterialInstance)
@@ -171,7 +171,7 @@ void UMuBlueprintLibraryBPLibrary::GetFxInvolvedDynamicParameter(const UMaterial
 	}
 }
 
-void UMuBlueprintLibraryBPLibrary::GetMaterialInstanceParametersEditorDisplayed(UMaterialInstance* MaterialInstance, TArray<FString>& ParameterName)
+void UMuBlueprintFunctionLibrary::GetMaterialInstanceParametersEditorDisplayed(UMaterialInstance* MaterialInstance, TArray<FString>& ParameterName)
 {
 	UMaterialEditorInstanceConstant* MaterialEditorInstance = NewObject<UMaterialEditorInstanceConstant>(MaterialInstance->GetPackage(), NAME_None, RF_Transactional);
 	UMaterialInstanceConstant* InstanceConstant = Cast<UMaterialInstanceConstant>(MaterialInstance);
@@ -191,7 +191,7 @@ void UMuBlueprintLibraryBPLibrary::GetMaterialInstanceParametersEditorDisplayed(
 	}
 }
 
-void UMuBlueprintLibraryBPLibrary::ClearMaterialInstanceNonexistentParameters(UMaterialInstance* MaterialInstance, EMaterialInstanceParameterType MIParameterType)
+void UMuBlueprintFunctionLibrary::ClearMaterialInstanceNonexistentParameters(UMaterialInstance* MaterialInstance, EMaterialInstanceParameterType MIParameterType)
 {
 	if (!IsValid(MaterialInstance))
 	{
