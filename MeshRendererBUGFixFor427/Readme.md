@@ -1,0 +1,13 @@
+这里临时修复了Niagara MeshRenderer关于SourceMode为Emitter的情况下的两个bug
+
+UE官方预计在5.2版本修复
+
+## VisibilityTag
+
+为MeshRenderer添加VisibilityTag
+
+修复VisibilityTag对Emitter SourceMode不生效的问题
+
+## DynamicMaterialParameter
+
+修复MeshRenderer在Emitter模式下DynamicMaterialParameter不生效的问题
