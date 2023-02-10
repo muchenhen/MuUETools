@@ -1,0 +1,3 @@
+[submodule "MemreportParser/UnrealEngineMemreportParser"]
+	path = MemreportParser/UnrealEngineMemreportParser
+	url = https://github.com/muchenhen/UnrealEngineMemreportParser.git
